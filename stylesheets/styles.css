@@ -1,0 +1,28 @@
+/* Style the header with a grey background and some padding */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #292b2c;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+  }
+
+.header img{
+    margin-left: 5%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
