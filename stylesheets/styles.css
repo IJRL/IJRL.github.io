@@ -28,7 +28,8 @@
   align-items: center; 
   margin: 0;
   max-width: none;
-  height: 100vh;
+  height: 100%;
+  padding: 10%;
   background-image: url("../assets/overviewbg.png");
   background-repeat:no-repeat;
   background-size:cover;
