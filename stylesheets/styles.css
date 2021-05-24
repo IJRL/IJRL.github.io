@@ -61,8 +61,18 @@
   margin-top: 10px;
 }
 
+.twitchembed{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+  max-width: none;
+  height: 100%;
+  padding: 5%;
+  background-color: #1791ba;
+}
+
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
