@@ -1,8 +1,13 @@
-/* Style the header with a grey background and some padding */
 *
 {
     margin: 0;
     padding: 0;
+    font-family: helveticaNeue;
+}
+
+@font-face {
+  font-family: helveticaNeue;
+  src: url("../assets/helveticaneue.ttf");
 }
 
 .header {
@@ -17,12 +22,69 @@
     margin-left: 5%;
 }
 
+.overview{
+  width: 100%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100vh;
+  background-image: url("../assets/overviewbg.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: bottom;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overview h1{
+  font-size: 80px;
+  text-align: center;
+  color: #1791ba;
+}
+
+.overview h2{
+  font-size: 60px;
+  text-align: center;
+  color: white;
+}
+
+.overview button{
+  margin: auto;
+  display:block;
+  border-radius: 100px;
+  color: white;
+  background-color: #7289da;
+  font-size: 25px;
+  padding: 10px;
+  padding-inline: 50px;
+  border: none;
+  margin-top: 10px;
+}
+
+
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: #292b2c;
     color: white;
     text-align: center;
   }
