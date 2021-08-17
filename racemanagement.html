@@ -25,6 +25,7 @@
 
         <button id="setHook" onclick="setHook()">Connect To Hook</button>
       
+        <button onclick="raceSettings()">View Race Settings</button>
         <button onclick="openLobby()">Lobby Open</button>
         <button onclick="openLobbyReserves()">Open To Reserves</button>
         <button onclick="readyMsg()">Ready Up Message</button>
@@ -60,6 +61,10 @@
       document.getElementById('steamLink').style.display = "none";
       document.getElementById('discID').style.display = "none";
       document.getElementById('setHook').style.display = "none";
+    }
+    
+    function raceSettings(){
+      alert("Race Settings:\nEqual F1 2021 Cars\n\n Weekend Structure:\n- Short Qualifying\n- 50% Race Distance (Long)\n\n Weather & Time Of Day:\n- Dynamic Weather\n- Realistic Session Start Time\n- Approximate Forecast Accuracy\n Rules & Flags:\n- Strict Corner Cutting\n- Parc Ferme Rules On\n- Standard Safety Car\n- Formation Lap On\n\n Simulation Settings:\n- 60 AI Difficulty\n- No Recovery Mode\n- Realistic Surface Type\n- Standard Damage\n- Standard Damage Rate\n- Hard Low Fuel Mode\n- Manual Race Starts\n- Collisions On\n- Ghosting Off\n- Surface & Carcass Tyre Temperature");
     }
 
     function openLobby(){
