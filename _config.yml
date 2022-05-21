@@ -1,9 +1,21 @@
 collections:
   posts:
-    permalink: /News/:title
+    permalink: /news/:title
   current_standings:
     output: true
-    permalink: /Standings/:name
+    permalink: /standings/:name
+    order:
+      - season-5-tier-1.md
+      - season-5-tier-2.md
   archived_standings:
     output: true
-    permalink: /Standings/:name
+    permalink: /standings/:name
+    order:
+      - season-4-tier-1.md
+      - season-4-tier-2.md
+      - season-4-tier-3.md
+      - season-3-tier-1.md
+      - season-3-tier-2.md
+      - season-2-tier-1.md
+      - season-2-tier-2.md
+      - season-1-tier-1.md
