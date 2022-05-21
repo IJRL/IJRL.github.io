@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IJRL F1</title>
+    <meta name="description" content="The official IJRL website."/>
+    
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/unsemantic-grid-responsive-no-ie7.css">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-inner">
+        <div class="header-shadow"></div>
+        <a class="header-nav-item" href="/"><img src="/assets/logo.png" style="display: block; height: 70px; width:70px;" alt="logo"/></a>
+        <div class="header-nav-item btn-toggle" style="margin-left: auto;">
+          <img class="theme-icon" src="/assets/sun.svg" style="margin: 0 auto; display: block; height: 20px; width:20px;" alt="theme"/>
+        </div>
+      </nav>
+    </header>
+
+    <div class="grid-container" style="margin-bottom: 30px;">
+        <h3 class="grid-100 mobile-grid-100 content-heading" id="title">IJRL Normal Race Control: Disconnected</h3>
+        <p class="grid-100 mobile-grid-100" style="font-size: 16px;margin-bottom: 35px;">Make Sure To Fill In All Inputs Before Connecting!</p>
+
+        <input class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 form-inputs" type="text" id="hookCode" name="hookCode" placeholder="Webhook Code">
+        <input class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 form-inputs" type="text" id="steamLink" name="steamLink" placeholder="Steam Profile Link">
+        <input class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 form-inputs" style="margin-bottom: 30px;" type="text" id="discID" name="discID" placeholder="Discord ID (Developer Mode)">
+
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 30px;" id="setHook" onclick="setHook()">Connect To Hook</button>
+      
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 15px;" onclick="raceSettings()">View Race Settings</button>
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 15px;" onclick="openLobby()">Lobby Open</button>
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 15px;" onclick="openLobbyReserves()">Open To Reserves</button>
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 15px;" onclick="readyMsg()">Ready Up Message</button>
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 15px;" onclick="restartMsg()">Restart Lobby</button>
+        <button class="grid-60 prefix-20 suffix-20 mobile-prefix-15 mobile-suffix-15 mobile-grid-70 button404" style="margin-bottom: 15px;" onclick="raceEnded()">Race Ended</button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <a class="footer-item" href="mailto:ijracingleague@gmail.com">Contact</a>
+        <div class="footer-item" style="margin-left: auto;">
+          <a href="https://discord.gg/H4s4p4cUF8"><img id="discordicon" src="assets/discord.svg" style="margin: 0 auto; display: block; height: 20px; width:20px; padding-right: 20px;" alt="discord"/></a>
+          <a href="https://www.twitch.tv/ijrl"><img id="twitchicon" src="assets/twitch.svg" style="margin: 0 auto; display: block; height: 20px; width:20px; padding-right: 20px;" alt="twitch"/></a>
+          <a href="https://www.youtube.com/channel/UCMMupnY0eRDCz1T8vA6UZvQ"><img id="youtubeicon" src="assets/youtube.svg" style="margin: 0 auto; display: block; height: 20px; width:20px; padding-right: 20px;" alt="youtube"/></a>
+          <a href="https://www.tiktok.com/@ijrl_f1"><img id="tiktokicon" src="assets/tiktok.svg" style="margin: 0 auto; display: block; height: 20px; width:20px; padding-right: 20px;" alt="tiktok"/></a>
+          <a href="https://twitter.com/IJRL_F1"><img id="twittericon" src="assets/twitter.svg" style="margin: 0 auto; display: block; height: 20px; width:20px;" alt="twitter"/></a>
+        </div>
+      </div>
+      <div class="footer-inner" style="height: 20px; margin-bottom: 20px;">
+        <p class="footer-item" style="display:block; margin-left: auto; margin-right:auto; height: 20px; line-height: 20px; font-size: 12px;">© 2022 IJRL. All Rights Reserved. - Designed By&nbsp;<a class="footer-item" style="display: inline-block; height: 20px; line-height: 20px; font-size: 12px; padding-left: 0px;" href="https://euandeas.com">Euan Deas</a></p>
+      </div>
+    </footer>
+  </body>
+  <script src="/scripts/theme.js"></script>
+  <script>
+    var steamLink = ""
+    var discordID = ""
+    var maindriverID = ""
+    var reservedriverID = ""
+    var linkschannelID = ""
+    var webhook = ""
+
+    function setHook(){
+      document.getElementById("title").innerHTML = "IJRL Normal Race Control: Connected"
+      var splitcode = (document.getElementById('hookCode').value).split('.')
+      
+      steamLink = document.getElementById('steamLink').value
+      discordID = document.getElementById('discID').value
+      maindriverID = splitcode[1]
+      reservedriverID = splitcode[2]
+      linkschannelID = splitcode[3]
+      webhook = "https://discord.com/api/webhooks/".concat(splitcode[0])
+    
+      document.getElementById('hookCode').style.display = "none";
+      document.getElementById('steamLink').style.display = "none";
+      document.getElementById('discID').style.display = "none";
+      document.getElementById('setHook').style.display = "none";
+    }
+    
+    function raceSettings(){
+      alert("Race Settings:\nEqual F1 2021 Cars\n\n Weekend Structure:\n- Short Qualifying\n- 50% Race Distance (Long)\n\n Weather & Time Of Day:\n- Dynamic Weather\n- Realistic Session Start Time\n- Approximate Forecast Accuracy\n Rules & Flags:\n- Strict Corner Cutting\n- Parc Ferme Rules On\n- Standard Safety Car\n- Formation Lap On\n\n Simulation Settings:\n- 60 AI Difficulty\n- No Recovery Mode\n- Realistic Surface Type\n- Standard Damage\n- Standard Damage Rate\n- Hard Low Fuel Mode\n- Manual Race Starts\n- Collisions On\n- Ghosting Off\n- Surface & Carcass Tyre Temperature");
+    }
+
+    function openLobby(){
+        var dict = {
+            "color": 0x1791ba,
+            "title":"The Lobby is Now Open!", 
+            "description":"<@&{0}> you are now able to join and fill your respective seats.\n\n<@&{1}> please wait until you get an invite to join.\n\nMake sure to have <@{2}> added on steam so we can invite you to the lobby:\n{3}".format(maindriverID, reservedriverID, discordID, steamLink)
+        };
+
+        sendMessage(dict, "||<@&{0}> <@&{1}>||".format(maindriverID, reservedriverID))
+    }
+
+    function openLobbyReserves(){
+        var dict = {
+            "color": 0x1791ba,
+            "title":"Reserve Spaces Available", 
+            "description":"<@&{0}> there are spaces available. \n\nThese are on a first come first serve basis, so join through the lobby leader to get your seat!".format(reservedriverID)
+        };
+        sendMessage(dict,"||<@&{0}>||".format(reservedriverID))
+    }
+
+    function readyMsg(){
+        var dict = {
+            "color": 0x1791ba,
+            "title":"Ready Up!", 
+            "description":"<@&{0}> <@&{1}> ready up, its time to start racing!\n\nRemember when setting up your race strategy at the start of the race, please do not ready up instantly to allow all drivers to setup!".format(maindriverID, reservedriverID)
+        };
+        sendMessage(dict, "||<@&{0}> <@&{1}>||".format(maindriverID, reservedriverID))
+    }
+
+    function restartMsg(){
+        var dict = {
+            "color": 0x1791ba,
+            "title":"TECHNICAL ISSUES! - LOBBY RESTART", 
+            "description":"<@&{0}> <@&{1}> due to technical issues we are going to have to restart the lobby. Please leave the session and join the new lobby.\n\nIf qualifying has already been completed, then top 10 must choose the tire they set their fastest lap on otherwise you will be disqualified. Everyone else has free choice.\n\nRemember when setting up your race strategy at the start of the race, please do not ready up instantly to allow all drivers to setup!\n\nThank you for your patience.".format(maindriverID, reservedriverID)
+        };
+        sendMessage(dict, "||<@&{0}> <@&{1}>||".format(maindriverID, reservedriverID))
+    }
+
+    function raceEnded(){
+        var dict = {
+            "color": 0x1791ba,
+            "title":"GGs Everyone!", 
+            "description":"<@&{0}> <@&{1}> congrats to the top 3 and we hope it was a great race!\n\nPlease make sure to report any incidents using the form in <#{2}>!\n\nYou can also share any of your best moments in <#757359006644699236> for all to see!".format(maindriverID, reservedriverID, linkschannelID)
+        };
+        sendMessage(dict, "||<@&{0}> <@&{1}>||".format(maindriverID, reservedriverID))
+    }
+
+    function sendMessage(embedDict, tagMessage) {
+      var request = new XMLHttpRequest();
+      request.open("POST", webhook);
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "IJRL",
+        content: tagMessage, 
+        embeds: [embedDict]     
+      }
+
+      request.send(JSON.stringify(params));    
+    }
+
+    String.prototype.format = function() {
+      var formatted = this;
+      for( var arg in arguments ) {
+          formatted = formatted.replace("{" + arg + "}", arguments[arg]);
+      }
+      return formatted;
+    };
+  </script>
+</html>
