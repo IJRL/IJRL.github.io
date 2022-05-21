@@ -1,0 +1,19 @@
+{% capture currentstandings %}
+{
+    {
+        "season": "5",
+        "tier": "1",
+        "link": ""
+    },
+    {
+        "season": "5",
+        "tier": "1",
+        "link": ""
+    },
+    {
+        "season": "5",
+        "tier": "1",
+        "link": ""
+    }
+}
+{% endcapture %}
