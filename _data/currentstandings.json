@@ -1,5 +1,4 @@
-{% capture archivedstandings %}
-{
+[
     {
         "season": "5",
         "tier": "1",
@@ -15,5 +14,4 @@
         "tier": "1",
         "link": ""
     }
-}
-{% endcapture %}
+]
