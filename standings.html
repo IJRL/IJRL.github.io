@@ -29,7 +29,7 @@
         <h3 class="grid-100 mobile-grid-100 content-heading" >Current Season</h3>
         {% for standing in site.current_standings %}
         <div class="grid-50 mobile-grid-100">
-            <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standings.url}}">
+            <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
                 <img src="{{standing.thumbnail}}"></img>
                 <div>
                 <h3 class="content-heading" style="text-decoration:none;">Season {{standing.season}} - Tier {{standing.tier}}</h3>
@@ -39,9 +39,9 @@
         {% endfor %}
 
         <h3 class="grid-100 mobile-grid-100 content-heading" >Archived Seasons</h3>
-        {% for standing in site.current_standings %}
+        {% for standing in site.archived_standings %}
         <div class="grid-50 mobile-grid-100">
-            <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standings.url}}">
+            <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
                 <img src="{{standing.thumbnail}}"></img>
                 <div>
                 <h3 class="content-heading" style="text-decoration:none;">Season {{standing.season}} - Tier {{standing.tier}}</h3>
