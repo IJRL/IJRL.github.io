@@ -3,7 +3,7 @@ collections:
     permalink: /News/:title
   current_standings:
     output: true
-    permalink: /Standings/:title
+    permalink: /Standings/:name
   archived_standings:
     output: true
-    permalink: /Standings/:title
+    permalink: /Standings/:name
