@@ -3,35 +3,66 @@
         {
             "season": "5",
             "tier": "1",
-            "link": ""
+            "link": "",
+            "thumbnail": "/assests/f1-2021-thumbnail.png"
         },
         {
             "season": "5",
             "tier": "1",
-            "link": ""
-        },
-        {
-            "season": "5",
-            "tier": "1",
-            "link": ""
+            "link": "",
+            "thumbnail": "/assests/f1-2021-thumbnail.png"
         }
     ],
 
     "archived":[
         {
-            "season": "5",
+            "season": "4",
             "tier": "1",
-            "link": ""
+            "link": "",
+            "thumbnail": "/assests/f1-2021-thumbnail.png"
         },
         {
-            "season": "5",
+            "season": "4",
             "tier": "1",
-            "link": ""
+            "link": "",
+            "thumbnail": "/assests/f1-2021-thumbnail.png"
         },
         {
-            "season": "5",
+            "season": "4",
             "tier": "1",
-            "link": ""
+            "link": "",
+            "thumbnail": "/assests/f1-2021-thumbnail.png"
+        },
+        {
+            "season": "3",
+            "tier": "1",
+            "link": "",
+            "thumbnail": "/assests/f1-2020-thumbnail.png"
+        },
+        {
+            "season": "3",
+            "tier": "2",
+            "link": "",
+            "thumbnail": "/assests/f1-2020-thumbnail.png"
+        },
+        {
+            "season": "2",
+            "tier": "1",
+            "link": "",
+            "thumbnail": "/assests/f1-2020-thumbnail.png"
+        },
+        {
+            "season": "2",
+            "tier": "2",
+            "link": "",
+            "thumbnail": "/assests/f1-2020-thumbnail.png"
+        },
+        {
+            "season": "1",
+            "tier": "1",
+            "link": "",
+            "thumbnail": "/assests/f1-2020-thumbnail.png"
         }
+
     ]
 }
