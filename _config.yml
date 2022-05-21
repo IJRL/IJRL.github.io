@@ -1,3 +1,9 @@
 collections:
   posts:
     permalink: /News/:title
+  current_standings:
+    output: true
+    permalink: /Standings/:title
+  archived_standings:
+    output: true
+    permalink: /Standings/:title
