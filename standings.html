@@ -32,7 +32,7 @@
         {% assign currentstand = site.current_standings | sort: "order" %}
         {% for standing in currentstand %}
         <div class="grid-50 mobile-grid-100">
-            <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
+            <a class="standings-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
                 <img src="{{standing.thumbnail}}"></img>
                 <div>
                 <h3 class="content-heading" style="text-decoration:none;">Season {{standing.season}} - Tier {{standing.tier}}</h3>
@@ -45,7 +45,7 @@
         {% assign archstand = site.archived_standings | sort: "order" %}
         {% for standing in archstand %}
         <div class="grid-50 mobile-grid-100">
-            <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
+            <a class="standings-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
                 <img src="{{standing.thumbnail}}"></img>
                 <div>
                 <h3 class="content-heading" style="text-decoration:none;">Season {{standing.season}} - Tier {{standing.tier}}</h3>

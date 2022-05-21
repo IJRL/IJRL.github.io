@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,6 +29,29 @@
       </header>
 
     <div class="grid-container">
+      {% for event in site.data.schedule %}
+      <div class="grid-100 mobile-grid-100 grid-container" style="padding-top: 0px; min-height: 0px; margin-bottom: 15px;">
+        <div class="grid-50 mobile-grid-100">
+          <h1 class="content-heading" style="font-size: 36px;">{{ event.title }}</h1>
+          <h1 style="font-size: 30px; margin-bottom:15px;">{{ event.subtitle }}</h1>
+          <p style="font-size: 25px; margin-bottom:15px;">{{ event.timedate }}</p>
+        </div>
+        <div class="grid-50 hide-on-mobile">
+          <img src="{{ event.img }}" style="max-width:100%; max-height:100%; border-radius:0.375rem;">
+        </div>
+      </div>
+      {% endfor %}
+      
+      <!-- Card version
+      <div class="grid-100 mobile-grid-100 grid-container schedule-card" style="padding: 0px; min-height: 0px; margin-bottom: 15px;">
+        <div class="grid-50 mobile-grid-100" style="padding-top: 10px; padding-left: 15px;">
+          <h1 class="content-heading" style="font-size: 36px;">Round 6 - Chinese GP</h1>
+          <h1 style="font-size: 30px; margin-bottom:15px;">Season 5 - Tier 1</h1>
+          <p style="font-size: 25px; margin-bottom:15px;">19 Jun - 8:00PM</p>
+        </div>
+        <img class="grid-50 hide-on-mobile" src="/assets/f1-2020-thumbnail.png">
+      </div>
+      -->
     </div>
 
     <footer class="footer">
