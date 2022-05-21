@@ -27,7 +27,8 @@
 
     <div class="grid-container">
         <h3 class="grid-100 mobile-grid-100 content-heading" >Current Season</h3>
-        {% for standing in site.current_standings %}
+        {% assign currentstand = site.current_standings | sort: "order" %}
+        {% for standing in currentstand %}
         <div class="grid-50 mobile-grid-100">
             <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
                 <img src="{{standing.thumbnail}}"></img>
@@ -39,7 +40,8 @@
         {% endfor %}
 
         <h3 class="grid-100 mobile-grid-100 content-heading" >Archived Seasons</h3>
-        {% for standing in site.archived_standings %}
+        {% assign archstand = site.archived_standings | sort: "order" %}
+        {% for standing in archstand %}
         <div class="grid-50 mobile-grid-100">
             <a class="project-card" style="font-size: 36px; margin-bottom: 20px;" href="{{standing.url}}">
                 <img src="{{standing.thumbnail}}"></img>
