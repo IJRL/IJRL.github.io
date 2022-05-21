@@ -1,14 +1,38 @@
 [
     {
-        "title": "Round 6 - Chinese GP",
+        "title": "Round 2 - Italy (Monza) GP",
         "subtitle": "Season 5 - Tier 1",
-        "timedate": "19 Jun - 8:00PM",
+        "timedate": "27 May - 8:00PM",
         "img": "/assets/f1-2021-thumbnail.png"
     },
     {
-        "title": "Round 7 - Chinese GP",
+        "title": "Round 2 - Italy (Monza) GP",
+        "subtitle": "Season 5 - Tier 2",
+        "timedate": "28 May - 8:00PM",
+        "img": "/assets/f1-2021-thumbnail.png"
+    },
+    {
+        "title": "Round 3 - Brazil GP",
         "subtitle": "Season 5 - Tier 1",
-        "timedate": "20 Jun - 8:00PM",
+        "timedate": "3 Jun - 8:00PM",
+        "img": "/assets/f1-2021-thumbnail.png"
+    },
+    {
+        "title": "Round 3 - Brazil GP",
+        "subtitle": "Season 5 - Tier 2",
+        "timedate": "4 Jun - 8:00PM",
+        "img": "/assets/f1-2021-thumbnail.png"
+    },
+    {
+        "title": "Round 4 - Britain GP",
+        "subtitle": "Season 5 - Tier 1",
+        "timedate": "10 Jun - 8:00PM",
+        "img": "/assets/f1-2021-thumbnail.png"
+    },
+    {
+        "title": "Round 3 - Britain GP",
+        "subtitle": "Season 5 - Tier 2",
+        "timedate": "11 Jun - 8:00PM",
         "img": "/assets/f1-2021-thumbnail.png"
     }
 ]
