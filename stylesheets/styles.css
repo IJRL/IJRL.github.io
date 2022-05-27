@@ -160,6 +160,21 @@ body.dark-theme {
     position: relative;
 }
 
+@media (max-width: 465px) {
+  .header-nav-item {
+    display: flex; 
+    align-items: center;
+    height: 55px;
+    padding: 0 10px;
+    padding-top: 0px;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--text-color);
+    z-index: 3;
+    position: relative;
+}
+}
+
 a {
     background-color: transparent;
     text-decoration: none;
