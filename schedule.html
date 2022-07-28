@@ -29,6 +29,12 @@
       </header>
 
     <div class="grid-container">
+      {% if site.data.schedule.size == 0 %}
+      <div class="grid-100 mobile-grid-100" style="padding-top: 25vh;"></div>
+      <h1 class="grid-50 prefix-25 suffix-25 mobile-prefix-10 mobile-suffix-10 mobile-grid-80" style="font-size: 36px; padding-bottom: 5px;">No Schedule.</h1>
+      <p class="grid-50 prefix-25 suffix-25 mobile-prefix-10 mobile-suffix-10 mobile-grid-80" style="font-size: 16px; padding-bottom: 5px;">Come back soon once the schedule has been updated.</p>
+      {% endif %}
+      
       {% for event in site.data.schedule %}
       <div class="grid-100 mobile-grid-100 grid-container" style="padding-top: 0px; min-height: 0px; margin-bottom: 15px;">
         <div class="grid-50 mobile-grid-100">
