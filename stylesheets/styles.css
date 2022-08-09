@@ -133,6 +133,18 @@ body.dark-theme {
     padding-right: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .wide {
+      display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .thin {
+      display: none;
+  }
+}
+
 .header-nav-item {
     display: flex; 
     align-items: center;
