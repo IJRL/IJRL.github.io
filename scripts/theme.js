@@ -1,5 +1,7 @@
 const btn = document.querySelector(".btn-toggle");
+const btn2 = document.querySelector(".btn-toggle2");
 const icon = document.querySelector(".theme-icon");
+const icon2 = document.querySelector(".theme-icon2");
 const discord = document.getElementById("discordicon");
 const twitch = document.getElementById("twitchicon");
 const youtube = document.getElementById("youtubeicon");
@@ -30,6 +32,10 @@ btn.addEventListener("click", function () {
   changeTheme();
 });
 
+btn2.addEventListener("click", function () {
+  changeTheme();
+});
+
 function changeTheme(){
   document.body.classList.toggle("dark-theme");
   if (localStorage.getItem("theme") == "dark") {
@@ -44,6 +50,7 @@ function changeTheme(){
 
 function setDark(){
   icon.src = "/assets/moon.svg";
+  icon2.src = "/assets/moon.svg";
   discord.src = "/assets/discorddark.svg";
   twitch.src = "/assets/twitchdark.svg";
   youtube.src = "/assets/youtubedark.svg";
@@ -53,6 +60,7 @@ function setDark(){
 
 function setLight(){
   icon.src = "/assets/sun.svg";
+  icon2.src = "/assets/sun.svg";
   discord.src = "/assets/discord.svg";
   twitch.src = "/assets/twitch.svg";
   youtube.src = "/assets/youtube.svg";
