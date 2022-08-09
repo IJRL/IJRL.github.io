@@ -7,6 +7,7 @@ const twitch = document.getElementById("twitchicon");
 const youtube = document.getElementById("youtubeicon");
 const tiktok = document.getElementById("tiktokicon");
 const twitter = document.getElementById("twittericon");
+const menu = document.querySelector(".menu-icon");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
@@ -56,6 +57,7 @@ function setDark(){
   youtube.src = "/assets/youtubedark.svg";
   tiktok.src = "/assets/tiktokdark.svg";
   twitter.src = "/assets/twitterdark.svg";
+  menu.src = "/assets/menudark.svg";
 }
 
 function setLight(){
@@ -66,4 +68,5 @@ function setLight(){
   youtube.src = "/assets/youtube.svg";
   tiktok.src = "/assets/tiktok.svg";
   twitter.src = "/assets/twitter.svg";
+  menu.src = "/assets/menu.svg";
 }
