@@ -1,6 +1,6 @@
 ---
 layout: "standings"
-order: 0
+order: 1
 season: "6"
 tier: "2"
 thumbnail: "/assets/f1-22-tier-2.png"
