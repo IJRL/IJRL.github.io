@@ -224,13 +224,13 @@ a {
   font-size: 1rem;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
-  background: #1791ba;
-  color: var(--text-color);
+  background: #ffcc1c;
+  color: #1a202c;
   font-family: 'Roboto', sans-serif;
 }
 
 .button404:hover {
-  background: #199bc6;
+  background: #f5cc36;
 }
 
 .button404:focus {
